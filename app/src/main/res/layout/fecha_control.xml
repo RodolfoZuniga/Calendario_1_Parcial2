@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txt_titAnio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Selecciona un año"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="5dp"
+        />
+
+    <EditText
+        android:id="@+id/genAnio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="120dp"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:hint="Ingrese el año"/>
+
+    <TextView
+        android:id="@+id/txt_titMes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Selecciona un mes"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="15dp"
+        />
+
+    <Spinner
+        android:id="@+id/genMes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="100dp"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/txt_titdia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Selecciona un dia"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/lyDia">
+
+        <Button
+            android:id="@+id/btn1d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="◀"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/txtDIA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01"
+            android:textSize="25dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            />
+
+        <Button
+            android:id="@+id/btn2d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="▶"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fechaGenerada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha: "
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/txtDia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/txtMes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/txtAno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024"
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+</LinearLayout>
