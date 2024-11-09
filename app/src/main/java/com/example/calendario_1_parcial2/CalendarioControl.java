@@ -4,6 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -75,16 +76,21 @@ public class CalendarioControl extends LinearLayout {
             public void onNothingSelected(android.widget.AdapterView<?> parent) { }
         });
 
-        genAnio.setOnFocusChangeListener((view, hasFocus) -> {
-            if (!hasFocus) {
+        genAnio.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
                 try {
                     anio = Integer.parseInt(genAnio.getText().toString());
                 } catch (NumberFormatException e) {
                     anio = Calendar.getInstance().get(Calendar.YEAR);
                 }
                 actualizarFecha();
+
+                genAnio.clearFocus();
+                return true;
             }
+            return false;
         });
+
     }
 
     private void actualizarFecha() {
