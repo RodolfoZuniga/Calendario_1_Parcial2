@@ -24,7 +24,8 @@
         android:layout_marginHorizontal="120dp"
         android:inputType="number"
         android:minHeight="48dp"
-        android:hint="Ingrese el año"/>
+        android:hint="Ingrese el año"
+        android:imeOptions="actionDone"/>
 
     <TextView
         android:id="@+id/txt_titMes"
